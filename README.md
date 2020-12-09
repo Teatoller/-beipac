@@ -7,25 +7,43 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Beipac
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel Mpesa Customer-to-Business-C2B stk push integration.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Prerequisites
 
-## Learning Laravel
+- PHP version 7.4.12
+- composer 1.10.15 or higher.
+- Laravel 8^
+- MySQL dB
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+To check if installed on your machine run ```composer -v``` on terminal
+To check php version on your terminal run ```php -version```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Getting Started
+
+1. Setting Repo.
+
+- ```mkdir project```
+- ```cd project```
+- ```git clone https://github.com/Teatoller/beipac.git```
+- ```cd beipac```
+- ```git checkout develop```
+
+v. Open your choice editor  (for vscode run ```code .``` on terminal)
+
+2. Make sure you have the latest .env file as per the `example .env`
+3. To get Mpesa details register an application with sign up for an 
+account with Safaricom Daraja [daraja API](https://developer.safaricom.co.ke/) and
+register an application name. Then use the credential of the application
+registered.
+4. Follow instructions on ngrok to generate a call back https url [ngrok](https://ngrok.com/)
+5. On the beipac terminal run ```php artisan serve```
+
+6. Use postman to run the test as illustrated in the [pull request](https://github.com/Teatoller/beipac/pull/1)
+
 
 ## Laravel Sponsors
 

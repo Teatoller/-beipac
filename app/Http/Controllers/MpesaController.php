@@ -46,9 +46,6 @@ class MpesaController extends Controller
     public function stkPush(Request $request)
     {
 
-        // $request->user;
-        // $amount = $request->amount;
-        // $phone = $request->phone;
         $phone = config('app.phone'); //0722.... Nb: temporarily set in the .env file
         $formatedPhone = substr($phone, 1); //722....
         $code = "254";
@@ -80,15 +77,12 @@ class MpesaController extends Controller
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
-        // $curl_response = curl_exec($curl);
 
         if ($curl_response = curl_exec($curl)) {
             return $curl_response;
         } else {
             return "STK push failed!";
         }
-
-        // return redirect('/confirm');
 
     }
 
